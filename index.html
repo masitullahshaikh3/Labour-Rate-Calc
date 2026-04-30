@@ -382,6 +382,27 @@
     <p class="text-xs text-slate-400 mt-3">* Hourly rate ≈ Daily rate ÷ 8 hours</p>
   </div>
 
+  <!-- Footer Section -->
+<footer class="mt-10 pb-10 text-center border-t pt-5">
+    <button onclick="togglePrivacy()" class="text-sm text-gray-500 hover:underline">Privacy Policy</button>
+    <p class="text-xs text-gray-400 mt-2">© 2026 Labour Rate India | Mumbra-Thane Special</p>
+</footer>
+
+<!-- Privacy Modal (Hidden by default) -->
+<div id="privacyModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+    <div class="bg-white rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6 relative">
+        <button onclick="togglePrivacy()" class="absolute top-2 right-4 text-2xl font-bold">&times;</button>
+        <h2 class="text-xl font-bold mb-4 text-blue-600">Privacy Policy</h2>
+        <div class="text-sm text-gray-700 leading-relaxed space-y-4">
+            <p><strong>Effective Date:</strong> April 30, 2026</p>
+            <p>At <strong>Labour Rate India</strong>, accessible from https://labourrateindia.netlify.app/, we prioritize the privacy of our visitors. This policy outlines the types of information we collect and how we use it.</p>
+            <p><strong>1. Cookies & Google AdSense:</strong> We use Google AdSense to serve ads. Google uses cookies (like the DART cookie) to show ads based on your visit to this and other sites on the internet.</p>
+            <p><strong>2. Log Files:</strong> Like most websites, we collect standard info like IP addresses and browser types to analyze trends, but this is not linked to your personal identity.</p>
+            <p><strong>3. Consent:</strong> By using our calculator, you agree to our privacy practices.</p>
+        </div>
+    </div>
+</div>
+
   <!-- Footer note -->
   <p class="text-center text-xs text-slate-400 mt-6 mb-3">
     Made with ❤️ for contractors, project managers &amp; homeowners across Maharashtra.
@@ -596,6 +617,10 @@
       80%{transform:translateX(4px)}
     }`;
   document.head.appendChild(style);
+  function togglePrivacy() {
+    const modal = document.getElementById('privacyModal');
+    modal.classList.toggle('hidden');
+}
 </script>
 </body>
 </html>
