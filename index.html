@@ -1,281 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6065698473921213"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6065698473921213"
      crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Labour Rate Calculator – Mumbai & Pune</title>
+  <title>Labour Rate Calculator – Maharashtra 2025</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --saffron: #f97316;
-      --saffron-light: #fff7ed;
-      --saffron-border: #fed7aa;
-      --green: #16a34a;
-      --green-light: #f0fdf4;
-      --green-border: #bbf7d0;
-      --navy: #1e3a5f;
-      --card-shadow: 0 4px 6px -1px rgba(0,0,0,.07), 0 10px 32px -4px rgba(0,0,0,.1);
+      --saffron:#f97316; --saffron-light:#fff7ed; --saffron-border:#fed7aa;
+      --green:#16a34a;   --green-light:#f0fdf4;   --green-border:#bbf7d0;
+      --card-shadow:0 4px 6px -1px rgba(0,0,0,.07),0 10px 32px -4px rgba(0,0,0,.1);
     }
+    *{box-sizing:border-box;}
+    body{
+      font-family:'DM Sans',sans-serif;
+      background:#f1f5f9;
+      background-image:radial-gradient(circle at 20% 10%,#fff7ed 0%,transparent 40%),radial-gradient(circle at 80% 90%,#eff6ff 0%,transparent 40%);
+      min-height:100vh;padding-bottom:80px;
+    }
+    h1,h2,h3{font-family:'Syne',sans-serif;}
 
-    * { box-sizing: border-box; }
+    /* ── Ads ── */
+    .ad-slot{border:2px dashed #cbd5e1;background:#f8fafc;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:#94a3b8;font-size:.7rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;border-radius:10px;user-select:none;}
+    .ad-slot svg{opacity:.35;}
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background-color: #f1f5f9;
-      background-image:
-        radial-gradient(circle at 20% 10%, #fff7ed 0%, transparent 45%),
-        radial-gradient(circle at 80% 90%, #eff6ff 0%, transparent 45%);
-      min-height: 100vh;
-      padding-bottom: 80px;
-    }
+    /* ── Form ── */
+    .form-select,.form-input{width:100%;appearance:none;-webkit-appearance:none;background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:10px;padding:11px 16px;font-family:'DM Sans',sans-serif;font-size:.95rem;color:#1e293b;transition:border-color .2s,box-shadow .2s,background .2s;outline:none;}
+    .form-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px;}
+    .form-select:focus,.form-input:focus{border-color:var(--saffron);background:#fff;box-shadow:0 0 0 3px rgba(249,115,22,.12);}
+    .form-label{display:block;font-size:.78rem;font-weight:600;color:#475569;margin-bottom:6px;letter-spacing:.05em;text-transform:uppercase;}
 
-    h1, h2, h3, .font-display { font-family: 'Syne', sans-serif; }
+    /* ── Location search ── */
+    .search-wrap{position:relative;}
+    .search-wrap svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);pointer-events:none;}
+    .search-wrap input{padding-left:38px!important;}
+    #loc-list{border:1.5px solid #e2e8f0;border-radius:10px;background:#f8fafc;overflow-y:auto;max-height:240px;display:none;}
+    #loc-list::-webkit-scrollbar{width:5px;}
+    #loc-list::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:99px;}
 
-    /* ── Ad Slots ───────────────────────────────── */
-    .ad-slot {
-      border: 2px dashed #cbd5e1;
-      background: #f8fafc;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 4px;
-      color: #94a3b8;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      border-radius: 10px;
-      user-select: none;
-    }
-    .ad-slot svg { opacity: .4; }
+    /* ── Unit toggle ── */
+    .unit-toggle{display:flex;border:1.5px solid #e2e8f0;border-radius:10px;overflow:hidden;background:#f8fafc;}
+    .unit-btn{flex:1;padding:11px 0;font-family:'DM Sans',sans-serif;font-size:.93rem;font-weight:500;border:none;background:transparent;color:#64748b;cursor:pointer;transition:all .2s;}
+    .unit-btn.active{background:var(--saffron);color:#fff;font-weight:700;box-shadow:0 2px 8px rgba(249,115,22,.3);}
 
-    /* ── Form Controls ──────────────────────────── */
-    .form-select, .form-input {
-      width: 100%;
-      appearance: none;
-      -webkit-appearance: none;
-      background-color: #f8fafc;
-      border: 1.5px solid #e2e8f0;
-      border-radius: 10px;
-      padding: 11px 16px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.95rem;
-      color: #1e293b;
-      transition: border-color .2s, box-shadow .2s, background .2s;
-      outline: none;
-    }
-    .form-select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 14px center;
-      padding-right: 40px; }
-    .form-select:focus, .form-input:focus {
-      border-color: var(--saffron);
-      background-color: #fff;
-      box-shadow: 0 0 0 3px rgba(249,115,22,.12);
-    }
-    .form-label {
-      display: block;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: #475569;
-      margin-bottom: 6px;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-    }
+    /* ── Calc button ── */
+    .calc-btn{width:100%;padding:15px;border-radius:12px;border:none;background:linear-gradient(135deg,#f97316 0%,#ea580c 100%);color:#fff;font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:.03em;cursor:pointer;transition:transform .15s,box-shadow .15s;box-shadow:0 4px 14px rgba(249,115,22,.4);display:flex;align-items:center;justify-content:center;gap:8px;}
+    .calc-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(249,115,22,.45);}
+    .calc-btn:active{transform:translateY(0);}
 
-    /* ── Unit Toggle ────────────────────────────── */
-    .unit-toggle { display: flex; border: 1.5px solid #e2e8f0; border-radius: 10px; overflow: hidden; background: #f8fafc; }
-    .unit-btn {
-      flex: 1;
-      padding: 11px 0;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.93rem;
-      font-weight: 500;
-      border: none;
-      background: transparent;
-      color: #64748b;
-      cursor: pointer;
-      transition: all .2s;
-    }
-    .unit-btn.active {
-      background: var(--saffron);
-      color: #fff;
-      font-weight: 700;
-      box-shadow: 0 2px 8px rgba(249,115,22,.3);
-    }
+    /* ── Result ── */
+    #result-box{display:none;border:1.5px solid var(--green-border);background:var(--green-light);border-radius:14px;padding:20px 22px;animation:fadeSlideUp .35s ease both;}
+    @keyframes fadeSlideUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 
-    /* ── Calculate Button ───────────────────────── */
-    .calc-btn {
-      width: 100%;
-      padding: 15px;
-      border-radius: 12px;
-      border: none;
-      background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-      color: #fff;
-      font-family: 'Syne', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      letter-spacing: .03em;
-      cursor: pointer;
-      transition: transform .15s, box-shadow .15s, opacity .15s;
-      box-shadow: 0 4px 14px rgba(249,115,22,.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-    .calc-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(249,115,22,.45); }
-    .calc-btn:active { transform: translateY(0); }
+    /* ── Rate badge ── */
+    .rate-badge{display:inline-flex;align-items:center;gap:6px;background:var(--saffron-light);border:1px solid var(--saffron-border);color:#c2410c;font-size:.78rem;font-weight:600;border-radius:999px;padding:3px 10px;}
 
-    /* ── Result Box ─────────────────────────────── */
-    #result-box {
-      display: none;
-      border: 1.5px solid var(--green-border);
-      background: var(--green-light);
-      border-radius: 14px;
-      padding: 20px 22px;
-      animation: fadeSlideUp .35s ease both;
-    }
-    @keyframes fadeSlideUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+    /* ── Info chip ── */
+    .info-chip{display:inline-flex;align-items:center;gap:5px;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;font-size:.73rem;font-weight:500;color:#475569;padding:3px 9px;}
 
-    /* ── Rate Badge ─────────────────────────────── */
-    .rate-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--saffron-light);
-      border: 1px solid var(--saffron-border);
-      color: #c2410c;
-      font-size: 0.78rem;
-      font-weight: 600;
-      border-radius: 999px;
-      padding: 3px 10px;
-    }
+    /* ── Tier badges ── */
+    .tb-vip{background:#fef3c7;color:#92400e;border:1px solid #fde68a;}
+    .tb-high{background:#ede9fe;color:#5b21b6;border:1px solid #ddd6fe;}
+    .tb-mid{background:#e0f2fe;color:#0369a1;border:1px solid #bae6fd;}
+    .tb-std{background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;}
+    .tier-pill{font-size:.6rem;font-weight:700;padding:2px 7px;border-radius:5px;letter-spacing:.04em;text-transform:uppercase;}
 
-    /* ── Sticky Footer Ad ───────────────────────── */
-    #sticky-ad {
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      z-index: 50;
-      background: #fff;
-      border-top: 1px solid #e2e8f0;
-      padding: 6px 16px;
-    }
+    /* ── Header ── */
+    .header-stripe{background:linear-gradient(90deg,#1e3a5f 0%,#1e40af 60%,#0f172a 100%);padding:14px 0 12px;}
 
-    /* ── Header stripe ──────────────────────────── */
-    .header-stripe {
-      background: linear-gradient(90deg, #1e3a5f 0%, #1e40af 60%, #0f172a 100%);
-      padding: 14px 0 12px;
-    }
+    /* ── Sticky footer ── */
+    #sticky-ad{position:fixed;bottom:0;left:0;right:0;z-index:50;background:#fff;border-top:1px solid #e2e8f0;padding:6px 16px;}
 
-    /* ── Info chips ─────────────────────────────── */
-    .info-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: #f1f5f9;
-      border: 1px solid #e2e8f0;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: #475569;
-      padding: 3px 10px;
-    }
+    /* ── Region section header ── */
+    .region-hdr{font-family:'Syne',sans-serif;font-weight:700;font-size:.78rem;color:#64748b;text-transform:uppercase;letter-spacing:.07em;display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+
+    /* ── Rate mini-card ── */
+    .rate-card{background:#fff;border-radius:12px;padding:12px 14px;cursor:pointer;transition:box-shadow .2s,transform .15s;}
+    .rate-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.1);transform:translateY(-2px);}
+
+    @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
   </style>
 </head>
 <body>
 
-<!-- ════════════════════════════════════════════════════════
-     HEADER STRIPE
-════════════════════════════════════════════════════════ -->
+<!-- HEADER -->
 <div class="header-stripe">
   <div class="max-w-3xl mx-auto px-4 flex items-center justify-between">
     <div class="flex items-center gap-2">
       <span class="text-2xl">🏗️</span>
-      <span class="font-display font-800 text-white text-lg tracking-tight" style="font-family:'Syne',sans-serif;font-weight:700;">LabourCalc<span class="text-orange-400">.in</span></span>
+      <span style="font-family:'Syne',sans-serif;font-weight:700;color:#fff;font-size:1.15rem;">LabourCalc<span style="color:#fb923c;">.in</span></span>
     </div>
     <div class="flex items-center gap-2">
-      <span class="text-xs text-blue-200 font-medium">Mumbai · Pune Regions</span>
-      <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+      <span style="font-size:.72rem;color:#bfdbfe;font-weight:500;">Maharashtra · 65+ Locations</span>
+      <span class="w-2 h-2 rounded-full bg-green-400" style="animation:pulse 2s infinite;"></span>
     </div>
   </div>
 </div>
 
-<!-- ════════════════════════════════════════════════════════
-     SLOT 1 — TOP LEADERBOARD BANNER
-════════════════════════════════════════════════════════ -->
+<!-- SLOT 1: TOP BANNER -->
 <div class="max-w-3xl mx-auto px-4 mt-4">
   <div class="ad-slot w-full" style="height:90px;">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-    AD SPACE &nbsp;·&nbsp; 728 × 90 Leaderboard
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+    AD SPACE · 728 × 90 Leaderboard
   </div>
 </div>
 
-<!-- ════════════════════════════════════════════════════════
-     PAGE TITLE
-════════════════════════════════════════════════════════ -->
-<div class="max-w-3xl mx-auto px-4 mt-6 mb-1 text-center">
-  <h1 class="text-3xl md:text-4xl font-display text-slate-800 leading-tight" style="font-family:'Syne',sans-serif;font-weight:800;">
-    Labour Rate Calculator
+<!-- TITLE -->
+<div class="max-w-3xl mx-auto px-4 mt-5 mb-1 text-center">
+  <h1 style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.65rem,5vw,2.3rem);color:#1e293b;line-height:1.2;">
+    Maharashtra Labour Rate Calculator
   </h1>
-  <p class="text-slate-500 mt-1 text-sm md:text-base">Instant daily &amp; hourly labour cost estimates for Mumbai &amp; Pune</p>
+  <p style="color:#64748b;margin-top:6px;font-size:.92rem;">Instant cost estimates for 65+ cities, VIP zones &amp; famous areas across Maharashtra</p>
   <div class="flex items-center justify-center flex-wrap gap-2 mt-3">
-    <span class="info-chip">📍 Mumbai · Thane · Bandra · Pune · Mumbra</span>
-    <span class="info-chip">📅 2024–25 Rates</span>
-    <span class="info-chip">⚡ Instant Result</span>
+    <span class="info-chip">🏙️ South Mumbai · BKC · Bandra</span>
+    <span class="info-chip">🌆 Suburbs · Navi Mumbai · Thane</span>
+    <span class="info-chip">🏔️ Pune · Nashik · Nagpur</span>
+    <span class="info-chip">🌊 Konkan · Marathwada · Vidarbha</span>
   </div>
 </div>
 
-<!-- ════════════════════════════════════════════════════════
-     MAIN CALCULATOR CARD
-════════════════════════════════════════════════════════ -->
+<!-- MAIN CARD -->
 <div class="max-w-2xl mx-auto px-4 mt-5">
-  <div class="bg-white rounded-2xl p-6 md:p-8" style="box-shadow:var(--card-shadow);">
+  <div class="bg-white rounded-2xl p-6 md:p-8" style="box-shadow:var(--card-shadow);" id="main-card">
 
-    <!-- Section label -->
     <div class="flex items-center gap-2 mb-5">
-      <div class="w-1 h-6 rounded-full bg-orange-500"></div>
-      <span class="font-display font-700 text-slate-700 text-sm tracking-wide uppercase" style="font-family:'Syne',sans-serif;font-weight:700;">Enter Details</span>
+      <div style="width:4px;height:24px;border-radius:99px;background:#f97316;flex-shrink:0;"></div>
+      <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:.78rem;color:#475569;text-transform:uppercase;letter-spacing:.06em;">Enter Project Details</span>
     </div>
 
     <!-- Row 1: Location + Category -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+
+      <!-- LOCATION SEARCH -->
       <div>
-        <label class="form-label" for="location">📍 Location</label>
-        <select class="form-select" id="location">
-          <option value="">— Select Location —</option>
-          <option value="mumbai">Mumbai (Central)</option>
-          <option value="thane">Thane</option>
-          <option value="bandra">Bandra / West Suburbs</option>
-          <option value="pune">Pune</option>
-          <option value="mumbra">Mumbra / Kalyan</option>
-        </select>
+        <label class="form-label">📍 Location / City</label>
+        <div class="search-wrap">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input class="form-input" type="text" id="loc-search" placeholder="Type city or area name…" autocomplete="off" />
+        </div>
+        <div id="loc-list"></div>
+        <input type="hidden" id="location-key" />
+        <div id="loc-selected" style="display:none;margin-top:6px;padding:9px 12px;background:#fff7ed;border:1px solid #fed7aa;border-radius:9px;font-size:.84rem;font-weight:600;color:#c2410c;display:none;align-items:center;gap:8px;"></div>
       </div>
+
+      <!-- CATEGORY -->
       <div>
-        <label class="form-label" for="category">🔧 Trade / Category</label>
+        <label class="form-label">🔧 Trade / Category</label>
         <select class="form-select" id="category">
           <option value="">— Select Trade —</option>
-          <option value="carpenter">Carpenter (Suthar)</option>
-          <option value="mistri">Mistri / Mason</option>
-          <option value="helper">Helper (Majdoor)</option>
-          <option value="painter">Painter</option>
-          <option value="plumber">Plumber</option>
+          <option value="carpenter">🪚 Carpenter (Suthar)</option>
+          <option value="mistri">🧱 Mistri / Mason</option>
+          <option value="helper">🪣 Helper (Majdoor)</option>
+          <option value="painter">🎨 Painter</option>
+          <option value="plumber">🔧 Plumber</option>
         </select>
+        <div id="rate-preview" class="hidden mt-2">
+          <div class="rate-badge" id="rate-badge-text">—</div>
+        </div>
       </div>
     </div>
 
     <!-- Row 2: Workers + Unit -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
       <div>
-        <label class="form-label" for="workers">👷 Number of Workers</label>
-        <input class="form-input" type="number" id="workers" min="1" max="500" placeholder="e.g. 2" />
+        <label class="form-label">👷 Number of Workers</label>
+        <input class="form-input" type="number" id="workers" min="1" max="500" placeholder="e.g. 3" />
       </div>
       <div>
         <label class="form-label">⏱ Rate Unit</label>
@@ -288,101 +180,82 @@
 
     <!-- Row 3: Duration -->
     <div class="mb-6">
-      <label class="form-label" for="duration" id="duration-label">📆 Duration (Days)</label>
+      <label class="form-label" id="duration-label">📆 Duration (Days)</label>
       <input class="form-input" type="number" id="duration" min="1" placeholder="e.g. 5" />
     </div>
 
-    <!-- Current Rate Preview -->
-    <div id="rate-preview" class="mb-5 hidden">
-      <div class="flex items-center gap-2 flex-wrap">
-        <span class="text-xs text-slate-400 font-medium uppercase tracking-wide">Current Market Rate:</span>
-        <span class="rate-badge" id="rate-badge-text">—</span>
-        <span class="text-xs text-slate-400">(approx. 2024–25)</span>
-      </div>
-    </div>
-
-    <!-- Calculate Button -->
+    <!-- BUTTON -->
     <button class="calc-btn" onclick="calculate()">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
       Calculate Labour Cost
     </button>
 
-    <!-- ── SLOT 2 & 3 — Two Square Ads below button ── -->
+    <!-- SLOT 2 & 3: Two Square Ads -->
     <div class="grid grid-cols-2 gap-3 mt-4">
-      <div class="ad-slot" style="height:120px;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-        AD SPACE
-        <span style="font-size:.65rem;opacity:.7">300 × 250</span>
+      <div class="ad-slot" style="height:110px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        AD SPACE<span style="font-size:.62rem;opacity:.7;">300 × 250</span>
       </div>
-      <div class="ad-slot" style="height:120px;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-        AD SPACE
-        <span style="font-size:.65rem;opacity:.7">300 × 250</span>
+      <div class="ad-slot" style="height:110px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        AD SPACE<span style="font-size:.62rem;opacity:.7;">300 × 250</span>
       </div>
     </div>
 
-    <!-- ── RESULT BOX ── -->
+    <!-- RESULT BOX -->
     <div id="result-box" class="mt-5">
-      <!-- Total Cost -->
       <div class="flex items-start justify-between flex-wrap gap-3 mb-4">
         <div>
-          <p class="text-xs font-semibold text-green-700 uppercase tracking-widest mb-1">Estimated Total Cost</p>
-          <p class="text-4xl font-display text-green-800" style="font-family:'Syne',sans-serif;font-weight:800;" id="total-display">₹0</p>
+          <p style="font-size:.68rem;font-weight:700;color:#15803d;text-transform:uppercase;letter-spacing:.12em;margin-bottom:4px;">Estimated Total Cost</p>
+          <p id="total-display" style="font-family:'Syne',sans-serif;font-weight:800;font-size:2.6rem;color:#166534;line-height:1;">₹0</p>
         </div>
-        <div class="flex items-center gap-2 bg-green-100 border border-green-200 rounded-xl px-4 py-2">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          <span class="text-sm font-semibold text-green-700">Calculated</span>
+        <div style="display:flex;align-items:center;gap:7px;background:#dcfce7;border:1px solid #86efac;border-radius:12px;padding:8px 14px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span style="font-size:.85rem;font-weight:700;color:#15803d;">Calculated</span>
         </div>
       </div>
-
-      <!-- Breakdown -->
-      <div class="bg-white border border-green-200 rounded-xl p-4 mb-3">
-        <p class="text-xs text-slate-400 uppercase tracking-widest font-semibold mb-2">Breakdown</p>
-        <p class="text-slate-700 font-medium text-sm md:text-base" id="breakdown-text"></p>
+      <div style="background:#fff;border:1px solid #bbf7d0;border-radius:12px;padding:14px 16px;margin-bottom:10px;">
+        <p style="font-size:.67rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin-bottom:6px;">Cost Breakdown</p>
+        <p id="breakdown-text" style="font-size:.97rem;color:#334155;font-weight:500;"></p>
       </div>
-
-      <!-- Metadata row -->
-      <div class="flex flex-wrap gap-2" id="meta-chips"></div>
-
-      <!-- Disclaimer -->
-      <p class="text-xs text-slate-400 mt-3 leading-relaxed">
-        ⚠️ Rates are indicative market averages for 2024–25 and may vary based on contractor, skill level, and current demand. GST (18%) may apply if hiring through a contractor firm.
-      </p>
+      <div style="background:#fff;border:1px solid #bbf7d0;border-radius:12px;padding:12px 16px;margin-bottom:10px;">
+        <p style="font-size:.67rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin-bottom:8px;">Summary</p>
+        <div id="meta-chips" class="flex flex-wrap gap-2"></div>
+      </div>
+      <p style="font-size:.72rem;color:#94a3b8;line-height:1.6;">⚠️ Rates are indicative 2024–25 market averages. Actual rates may vary based on skill level, contractor margin, project complexity &amp; demand. 18% GST may apply for registered firms.</p>
     </div>
 
   </div><!-- /card -->
 
-  <!-- ── SLOT 4 — Wide Banner after result ── -->
+  <!-- SLOT 4: Wide Banner -->
   <div class="ad-slot w-full mt-5" style="height:100px;">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-    AD SPACE &nbsp;·&nbsp; 728 × 90 Banner
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+    AD SPACE · 728 × 90 Wide Banner
   </div>
 
-  <!-- ── RATE CARD TABLE ── -->
+  <!-- REGION RATE REFERENCE -->
   <div class="bg-white rounded-2xl p-6 mt-5" style="box-shadow:var(--card-shadow);">
-    <div class="flex items-center gap-2 mb-4">
-      <div class="w-1 h-6 rounded-full bg-blue-500"></div>
-      <span class="font-display font-700 text-slate-700 text-sm tracking-wide uppercase" style="font-family:'Syne',sans-serif;font-weight:700;">Market Rate Reference (Per Day · ₹)</span>
+    <div class="flex items-center gap-2 mb-1">
+      <div style="width:4px;height:24px;border-radius:99px;background:#3b82f6;flex-shrink:0;"></div>
+      <div>
+        <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:.8rem;color:#475569;text-transform:uppercase;letter-spacing:.06em;">Rate Reference — All Maharashtra Regions</span>
+        <p style="font-size:.72rem;color:#94a3b8;margin-top:2px;">Click any card to auto-select that location above</p>
+      </div>
     </div>
-    <div class="overflow-x-auto">
-      <table class="w-full text-sm">
-        <thead>
-          <tr class="border-b border-slate-100">
-            <th class="text-left py-2 px-3 text-slate-400 font-semibold text-xs uppercase tracking-wide">Trade</th>
-            <th class="text-center py-2 px-3 text-slate-400 font-semibold text-xs uppercase tracking-wide">Mumbai</th>
-            <th class="text-center py-2 px-3 text-slate-400 font-semibold text-xs uppercase tracking-wide">Thane</th>
-            <th class="text-center py-2 px-3 text-slate-400 font-semibold text-xs uppercase tracking-wide">Bandra</th>
-            <th class="text-center py-2 px-3 text-slate-400 font-semibold text-xs uppercase tracking-wide">Pune</th>
-            <th class="text-center py-2 px-3 text-slate-400 font-semibold text-xs uppercase tracking-wide">Mumbra</th>
-          </tr>
-        </thead>
-        <tbody id="rate-table-body" class="divide-y divide-slate-50"></tbody>
-      </table>
+
+    <!-- Tier legend -->
+    <div class="flex flex-wrap gap-2 my-4">
+      <span class="tier-pill tb-vip">VIP = Premium luxury zones</span>
+      <span class="tier-pill tb-high">Premium = High demand areas</span>
+      <span class="tier-pill tb-mid">Standard = Major city areas</span>
+      <span class="tier-pill tb-std">Economy = Smaller towns</span>
     </div>
-    <p class="text-xs text-slate-400 mt-3">* Hourly rate ≈ Daily rate ÷ 8 hours</p>
+
+    <div id="region-cards" class="space-y-6"></div>
+    <p style="font-size:.72rem;color:#94a3b8;margin-top:14px;">* Hourly rate ≈ Daily ÷ 8 &nbsp;|&nbsp; Rates: Carpenter · Mistri · Helper · Painter · Plumber (per day)</p>
   </div>
 
-  <!-- Footer Section -->
+   <!-- Footer Section -->
 <footer class="mt-10 pb-10 text-center border-t pt-5">
     <button onclick="togglePrivacy()" class="text-sm text-gray-500 hover:underline">Privacy Policy</button>
     <p class="text-xs text-gray-400 mt-2">© 2026 Labour Rate India | Mumbra-Thane Special</p>
@@ -403,220 +276,328 @@
     </div>
 </div>
 
-  <!-- Footer note -->
-  <p class="text-center text-xs text-slate-400 mt-6 mb-3">
-    Made with ❤️ for contractors, project managers &amp; homeowners across Maharashtra.
-    <br/>Rates updated Q1 2025. Not legal/financial advice.
+  <p class="text-center mt-6 mb-3" style="font-size:.73rem;color:#94a3b8;">
+    Made with ❤️ for contractors, builders &amp; homeowners across Maharashtra · Rates Q1 2025 · Not legal/financial advice
   </p>
+</div>
 
-</div><!-- /main -->
-
-<!-- ════════════════════════════════════════════════════════
-     SLOT 5 — STICKY FOOTER AD
-════════════════════════════════════════════════════════ -->
+<!-- SLOT 5: STICKY FOOTER -->
 <div id="sticky-ad">
   <div class="max-w-3xl mx-auto">
-    <div class="ad-slot" style="height:56px;border-radius:8px;">
+    <div class="ad-slot" style="height:52px;border-radius:8px;">
       <div style="display:flex;align-items:center;gap:10px;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-        AD SPACE &nbsp;·&nbsp; Sticky Footer 320×50 / 728×90
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        AD SPACE · Sticky Footer 320×50 / 728×90
       </div>
     </div>
   </div>
 </div>
 
-
-<!-- ════════════════════════════════════════════════════════
-     JAVASCRIPT
-════════════════════════════════════════════════════════ -->
+<!-- ═══════════════════════ SCRIPT ══════════════════════════ -->
 <script>
-  // ── Rate Data (₹ per DAY) ──────────────────────────────
-  const RATES = {
-    // location → category → daily rate (INR)
-    mumbai: {
-      carpenter: 1100,
-      mistri:    1000,
-      helper:     700,
-      painter:    950,
-      plumber:   1200,
-    },
-    thane: {
-      carpenter:  950,
-      mistri:     850,
-      helper:     600,
-      painter:    800,
-      plumber:   1000,
-    },
-    bandra: {
-      carpenter: 1300,
-      mistri:    1150,
-      helper:     800,
-      painter:   1100,
-      plumber:   1400,
-    },
-    pune: {
-      carpenter:  900,
-      mistri:     800,
-      helper:     550,
-      painter:    750,
-      plumber:    950,
-    },
-    mumbra: {
-      carpenter:  750,
-      mistri:     680,
-      helper:     480,
-      painter:    650,
-      plumber:    820,
-    },
-  };
+// ─────────────────────────────────────────────────────────────
+// RATE DATA  — ₹ per DAY
+// Tiers: vip | high | mid | std
+// ─────────────────────────────────────────────────────────────
+const LOCATIONS = [
+  // ══ SOUTH MUMBAI VIP ════════════════════════════════════
+  {key:'nariman',    label:'Nariman Point / Churchgate',     region:'South Mumbai (VIP)',      tier:'vip',  rates:{carpenter:1600,mistri:1400,helper:1000,painter:1350,plumber:1700}},
+  {key:'fort',       label:'Fort / CST / Ballard Estate',    region:'South Mumbai (VIP)',      tier:'vip',  rates:{carpenter:1500,mistri:1350,helper:950, painter:1300,plumber:1600}},
+  {key:'colaba',     label:'Colaba / Cuffe Parade',          region:'South Mumbai (VIP)',      tier:'vip',  rates:{carpenter:1550,mistri:1380,helper:980, painter:1320,plumber:1650}},
+  {key:'malabarhill',label:'Malabar Hill / Walkeshwar',      region:'South Mumbai (VIP)',      tier:'vip',  rates:{carpenter:1650,mistri:1450,helper:1050,painter:1400,plumber:1800}},
+  {key:'worli',      label:'Worli / Sea Link Area',          region:'South Mumbai (VIP)',      tier:'vip',  rates:{carpenter:1400,mistri:1250,helper:900, painter:1200,plumber:1500}},
+  {key:'prabhadevi', label:'Prabhadevi / Dadar (W)',         region:'South Mumbai (VIP)',      tier:'high', rates:{carpenter:1250,mistri:1100,helper:800, painter:1050,plumber:1300}},
+  {key:'matunga',    label:'Matunga / Sion / Wadala',        region:'South Mumbai (VIP)',      tier:'high', rates:{carpenter:1200,mistri:1060,helper:760, painter:1010,plumber:1260}},
 
-  const TRADE_LABELS = {
-    carpenter: '🪚 Carpenter (Suthar)',
-    mistri:    '🧱 Mistri / Mason',
-    helper:    '🪣 Helper (Majdoor)',
-    painter:   '🎨 Painter',
-    plumber:   '🔧 Plumber',
-  };
+  // ══ MUMBAI WESTERN SUBURBS ══════════════════════════════
+  {key:'bandra',     label:'Bandra (West)',                  region:'Mumbai – Western Suburbs',tier:'vip',  rates:{carpenter:1400,mistri:1200,helper:850, painter:1150,plumber:1500}},
+  {key:'bkc',        label:'BKC – Bandra Kurla Complex',     region:'Mumbai – Western Suburbs',tier:'vip',  rates:{carpenter:1500,mistri:1300,helper:900, painter:1250,plumber:1600}},
+  {key:'khar',       label:'Khar / Santacruz (W)',           region:'Mumbai – Western Suburbs',tier:'high', rates:{carpenter:1300,mistri:1150,helper:820, painter:1100,plumber:1400}},
+  {key:'juhu',       label:'Juhu / Vile Parle (W)',          region:'Mumbai – Western Suburbs',tier:'high', rates:{carpenter:1280,mistri:1130,helper:810, painter:1080,plumber:1380}},
+  {key:'andheriw',   label:'Andheri (West) / DN Nagar',      region:'Mumbai – Western Suburbs',tier:'mid',  rates:{carpenter:1150,mistri:1000,helper:720, painter:950, plumber:1200}},
+  {key:'versova',    label:'Versova / Oshiwara / JVLR',      region:'Mumbai – Western Suburbs',tier:'mid',  rates:{carpenter:1100,mistri:960, helper:700, painter:910, plumber:1150}},
+  {key:'malad',      label:'Malad / Kandivali (W)',          region:'Mumbai – Western Suburbs',tier:'mid',  rates:{carpenter:1050,mistri:930, helper:680, painter:880, plumber:1100}},
+  {key:'borivali',   label:'Borivali / Dahisar (W)',         region:'Mumbai – Western Suburbs',tier:'mid',  rates:{carpenter:1000,mistri:880, helper:640, painter:840, plumber:1050}},
 
-  const LOCATION_LABELS = {
-    mumbai: 'Mumbai',
-    thane:  'Thane',
-    bandra: 'Bandra / West Suburbs',
-    pune:   'Pune',
-    mumbra: 'Mumbra / Kalyan',
-  };
+  // ══ MUMBAI EASTERN SUBURBS ══════════════════════════════
+  {key:'powai',      label:'Powai / Hiranandani Gardens',    region:'Mumbai – Eastern Suburbs',tier:'high', rates:{carpenter:1350,mistri:1200,helper:850, painter:1100,plumber:1450}},
+  {key:'lowerp',     label:'Lower Parel / Parel / NM Joshi', region:'Mumbai – Eastern Suburbs',tier:'high', rates:{carpenter:1300,mistri:1150,helper:820, painter:1090,plumber:1380}},
+  {key:'goregaon',   label:'Goregaon (E) / NESCO',          region:'Mumbai – Eastern Suburbs',tier:'mid',  rates:{carpenter:1070,mistri:940, helper:680, painter:890, plumber:1110}},
+  {key:'andherie',   label:'Andheri (East) / Sakinaka',     region:'Mumbai – Eastern Suburbs',tier:'mid',  rates:{carpenter:1100,mistri:970, helper:700, painter:920, plumber:1150}},
+  {key:'kurla',      label:'Kurla / Vidyavihar / Ghatkopar', region:'Mumbai – Eastern Suburbs',tier:'mid',  rates:{carpenter:1050,mistri:930, helper:670, painter:880, plumber:1100}},
+  {key:'chembur',    label:'Chembur / Govandi / Mankhurd',   region:'Mumbai – Eastern Suburbs',tier:'mid',  rates:{carpenter:1000,mistri:880, helper:640, painter:845, plumber:1050}},
+  {key:'mulund',     label:'Mulund / Bhandup / Vikhroli',    region:'Mumbai – Eastern Suburbs',tier:'mid',  rates:{carpenter:1000,mistri:880, helper:640, painter:840, plumber:1040}},
 
-  // ── State ──────────────────────────────────────────────
-  let currentUnit = 'day';
+  // ══ THANE DISTRICT ══════════════════════════════════════
+  {key:'thanecity',  label:'Thane City (Naupada / Kopri)',   region:'Thane District',         tier:'mid',  rates:{carpenter:980, mistri:870, helper:620, painter:820, plumber:1020}},
+  {key:'ghodbunder', label:'Ghodbunder Road / Manpada',     region:'Thane District',         tier:'mid',  rates:{carpenter:950, mistri:840, helper:600, painter:800, plumber:990}},
+  {key:'majiwada',   label:'Majiwada / Wagle Estate',       region:'Thane District',         tier:'mid',  rates:{carpenter:930, mistri:820, helper:590, painter:780, plumber:970}},
+  {key:'mumbra',     label:'Mumbra / Kausa / Diva',         region:'Thane District',         tier:'std',  rates:{carpenter:760, mistri:680, helper:480, painter:650, plumber:820}},
+  {key:'bhiwandi',   label:'Bhiwandi / Narpoli',            region:'Thane District',         tier:'std',  rates:{carpenter:720, mistri:640, helper:450, painter:600, plumber:770}},
+  {key:'kalyan',     label:'Kalyan / Dombivli (KDMC)',      region:'Thane District',         tier:'std',  rates:{carpenter:800, mistri:710, helper:500, painter:670, plumber:850}},
+  {key:'ambernath',  label:'Ambernath / Badlapur',          region:'Thane District',         tier:'std',  rates:{carpenter:700, mistri:620, helper:440, painter:580, plumber:750}},
+  {key:'ulhasnagar', label:'Ulhasnagar / Ambivli',          region:'Thane District',         tier:'std',  rates:{carpenter:720, mistri:640, helper:450, painter:600, plumber:770}},
+  {key:'shahad',     label:'Shahad / Titwala / Khadavli',   region:'Thane District',         tier:'std',  rates:{carpenter:660, mistri:590, helper:420, painter:560, plumber:710}},
 
-  function setUnit(u) {
-    currentUnit = u;
-    document.getElementById('btn-day').classList.toggle('active', u === 'day');
-    document.getElementById('btn-hour').classList.toggle('active', u === 'hour');
-    document.getElementById('duration-label').textContent =
-      u === 'day' ? '📆 Duration (Days)' : '⏱ Duration (Hours)';
-    updateRatePreview();
-  }
+  // ══ NAVI MUMBAI ═════════════════════════════════════════
+  {key:'vashi',      label:'Vashi / CBD Belapur',           region:'Navi Mumbai',            tier:'mid',  rates:{carpenter:1050,mistri:930, helper:670, painter:870, plumber:1100}},
+  {key:'nerul',      label:'Nerul / Seawoods / Sanpada',    region:'Navi Mumbai',            tier:'mid',  rates:{carpenter:1000,mistri:890, helper:640, painter:840, plumber:1050}},
+  {key:'airoli',     label:'Airoli / Ghansoli / Rabale',    region:'Navi Mumbai',            tier:'mid',  rates:{carpenter:980, mistri:870, helper:620, painter:820, plumber:1020}},
+  {key:'kharghar',   label:'Kharghar / Kamothe / Taloja',   region:'Navi Mumbai',            tier:'std',  rates:{carpenter:850, mistri:750, helper:530, painter:710, plumber:900}},
+  {key:'panvel',     label:'Panvel / New Panvel',           region:'Navi Mumbai',            tier:'std',  rates:{carpenter:820, mistri:730, helper:520, painter:680, plumber:870}},
 
-  // ── Live rate preview on dropdown change ───────────────
-  ['location', 'category'].forEach(id => {
-    document.getElementById(id).addEventListener('change', updateRatePreview);
+  // ══ VASAI–VIRAR / PALGHAR ═══════════════════════════════
+  {key:'miraroad',   label:'Mira Road / Bhayander',         region:'Vasai–Virar / Palghar',  tier:'std',  rates:{carpenter:830, mistri:740, helper:530, painter:700, plumber:880}},
+  {key:'vasai',      label:'Vasai / Nalasopara',            region:'Vasai–Virar / Palghar',  tier:'std',  rates:{carpenter:760, mistri:670, helper:480, painter:640, plumber:810}},
+  {key:'virar',      label:'Virar / Arnala / Naigaon',      region:'Vasai–Virar / Palghar',  tier:'std',  rates:{carpenter:720, mistri:640, helper:450, painter:610, plumber:770}},
+  {key:'palghar',    label:'Palghar / Boisar / Dahanu',     region:'Vasai–Virar / Palghar',  tier:'std',  rates:{carpenter:650, mistri:580, helper:410, painter:560, plumber:700}},
+
+  // ══ PUNE CITY ═══════════════════════════════════════════
+  {key:'koregaonpark',label:'Koregaon Park / Kalyani Nagar',region:'Pune City',              tier:'high', rates:{carpenter:1200,mistri:1050,helper:750, painter:1000,plumber:1280}},
+  {key:'hinjewadi',  label:'Hinjewadi / Wakad (IT Hub)',    region:'Pune City',              tier:'high', rates:{carpenter:1150,mistri:1020,helper:720, painter:970, plumber:1230}},
+  {key:'baner',      label:'Baner / Balewadi / Pashan',     region:'Pune City',              tier:'high', rates:{carpenter:1100,mistri:980, helper:700, painter:940, plumber:1180}},
+  {key:'viman',      label:'Viman Nagar / Kharadi',         region:'Pune City',              tier:'high', rates:{carpenter:1080,mistri:960, helper:690, painter:920, plumber:1150}},
+  {key:'hadapsar',   label:'Hadapsar / Magarpatta',         region:'Pune City',              tier:'mid',  rates:{carpenter:1000,mistri:890, helper:640, painter:850, plumber:1060}},
+  {key:'shivajinagar',label:'Shivajinagar / Deccan / FC Road',region:'Pune City',           tier:'mid',  rates:{carpenter:980, mistri:870, helper:620, painter:830, plumber:1040}},
+  {key:'punecity',   label:'Pune City (Sadashiv / Kasba)',  region:'Pune City',              tier:'mid',  rates:{carpenter:920, mistri:820, helper:580, painter:780, plumber:980}},
+  {key:'pcmc',       label:'Pimpri-Chinchwad (PCMC)',       region:'Pune City',              tier:'mid',  rates:{carpenter:940, mistri:830, helper:590, painter:790, plumber:990}},
+  {key:'lonavala',   label:'Lonavala / Khandala',           region:'Pune City',              tier:'mid',  rates:{carpenter:880, mistri:780, helper:560, painter:740, plumber:940}},
+  {key:'talegaon',   label:'Talegaon / Chakan / Dehu Road', region:'Pune City',              tier:'std',  rates:{carpenter:780, mistri:690, helper:490, painter:660, plumber:830}},
+
+  // ══ NASHIK REGION ═══════════════════════════════════════
+  {key:'nashikcity', label:'Nashik City (Gangapur Road)',   region:'Nashik Region',          tier:'mid',  rates:{carpenter:820, mistri:730, helper:520, painter:690, plumber:880}},
+  {key:'nashikroad', label:'Nashik Road / Satpur MIDC',     region:'Nashik Region',          tier:'std',  rates:{carpenter:770, mistri:680, helper:480, painter:640, plumber:820}},
+  {key:'shirdi',     label:'Shirdi / Kopargaon',            region:'Nashik Region',          tier:'std',  rates:{carpenter:700, mistri:620, helper:440, painter:590, plumber:750}},
+  {key:'trimbak',    label:'Trimbakeshwar / Igatpuri',      region:'Nashik Region',          tier:'std',  rates:{carpenter:660, mistri:590, helper:420, painter:560, plumber:710}},
+  {key:'malegaon',   label:'Malegaon / Dhule / Jalgaon',    region:'Nashik Region',          tier:'std',  rates:{carpenter:630, mistri:560, helper:400, painter:530, plumber:680}},
+
+  // ══ VIDARBHA ════════════════════════════════════════════
+  {key:'nagpurcity', label:'Nagpur City (Sitabuldi / Dharampeth)', region:'Vidarbha',        tier:'mid',  rates:{carpenter:870, mistri:770, helper:550, painter:730, plumber:930}},
+  {key:'nagpursuburb',label:'Nagpur Suburbs (Hingna / Butibori)', region:'Vidarbha',         tier:'std',  rates:{carpenter:780, mistri:690, helper:490, painter:660, plumber:840}},
+  {key:'amravati',   label:'Amravati',                      region:'Vidarbha',               tier:'std',  rates:{carpenter:700, mistri:620, helper:440, painter:590, plumber:750}},
+  {key:'akola',      label:'Akola / Washim',                region:'Vidarbha',               tier:'std',  rates:{carpenter:680, mistri:600, helper:430, painter:570, plumber:730}},
+  {key:'wardha',     label:'Wardha / Yavatmal',             region:'Vidarbha',               tier:'std',  rates:{carpenter:650, mistri:580, helper:410, painter:550, plumber:700}},
+  {key:'chandrapur', label:'Chandrapur / Gadchiroli',       region:'Vidarbha',               tier:'std',  rates:{carpenter:630, mistri:560, helper:400, painter:530, plumber:680}},
+
+  // ══ MARATHWADA ══════════════════════════════════════════
+  {key:'aurangabad', label:'Aurangabad / Chh. Sambhajinagar',region:'Marathwada',           tier:'mid',  rates:{carpenter:820, mistri:730, helper:520, painter:690, plumber:880}},
+  {key:'nanded',     label:'Nanded / Shri Hazur Sahib',     region:'Marathwada',             tier:'std',  rates:{carpenter:680, mistri:600, helper:430, painter:570, plumber:730}},
+  {key:'latur',      label:'Latur',                         region:'Marathwada',             tier:'std',  rates:{carpenter:660, mistri:580, helper:420, painter:560, plumber:710}},
+  {key:'osmanabad',  label:'Osmanabad / Dharashiv',         region:'Marathwada',             tier:'std',  rates:{carpenter:640, mistri:560, helper:400, painter:540, plumber:690}},
+  {key:'beed',       label:'Beed / Parli Vaijnath',         region:'Marathwada',             tier:'std',  rates:{carpenter:620, mistri:550, helper:390, painter:520, plumber:670}},
+  {key:'hingoli',    label:'Hingoli / Parbhani',            region:'Marathwada',             tier:'std',  rates:{carpenter:610, mistri:540, helper:385, painter:515, plumber:660}},
+
+  // ══ WESTERN MAHARASHTRA ═════════════════════════════════
+  {key:'kolhapur',   label:'Kolhapur',                      region:'Western Maharashtra',    tier:'mid',  rates:{carpenter:820, mistri:730, helper:520, painter:690, plumber:880}},
+  {key:'solapur',    label:'Solapur',                       region:'Western Maharashtra',    tier:'std',  rates:{carpenter:730, mistri:650, helper:460, painter:620, plumber:790}},
+  {key:'sangli',     label:'Sangli / Miraj',                region:'Western Maharashtra',    tier:'std',  rates:{carpenter:720, mistri:640, helper:450, painter:610, plumber:770}},
+  {key:'satara',     label:'Satara / Karad / Wai',          region:'Western Maharashtra',    tier:'std',  rates:{carpenter:710, mistri:630, helper:450, painter:600, plumber:760}},
+  {key:'mahabaleshwar',label:'Mahabaleshwar / Panchgani',   region:'Western Maharashtra',    tier:'std',  rates:{carpenter:760, mistri:680, helper:480, painter:640, plumber:810}},
+  {key:'baramati',   label:'Baramati / Indapur',            region:'Western Maharashtra',    tier:'std',  rates:{carpenter:680, mistri:600, helper:430, painter:570, plumber:730}},
+
+  // ══ KONKAN ══════════════════════════════════════════════
+  {key:'alibag',     label:'Alibag / Pen / Murud (Raigad)', region:'Konkan',                 tier:'std',  rates:{carpenter:750, mistri:670, helper:480, painter:640, plumber:800}},
+  {key:'khopoli',    label:'Khopoli / Khalapur',            region:'Konkan',                 tier:'std',  rates:{carpenter:700, mistri:620, helper:440, painter:590, plumber:750}},
+  {key:'ratnagiri',  label:'Ratnagiri / Chiplun',           region:'Konkan',                 tier:'std',  rates:{carpenter:680, mistri:600, helper:430, painter:580, plumber:730}},
+  {key:'sindhudurg', label:'Sindhudurg / Malvan / Kankavli',region:'Konkan',                 tier:'std',  rates:{carpenter:650, mistri:580, helper:410, painter:550, plumber:700}},
+  {key:'dapoli',     label:'Dapoli / Harnai / Guhagar',     region:'Konkan',                 tier:'std',  rates:{carpenter:660, mistri:590, helper:420, painter:560, plumber:710}},
+];
+
+// ─── Trade meta ──────────────────────────────────────────────
+const TRADE_LABELS = {carpenter:'🪚 Carpenter',mistri:'🧱 Mistri / Mason',helper:'🪣 Helper (Majdoor)',painter:'🎨 Painter',plumber:'🔧 Plumber'};
+const TIER_LABELS  = {vip:'VIP',high:'Premium',mid:'Standard',std:'Economy'};
+const TIER_CLS     = {vip:'tb-vip',high:'tb-high',mid:'tb-mid',std:'tb-std'};
+
+let currentUnit = 'day';
+let selectedLoc = null;
+
+// ─── Location list builder ────────────────────────────────────
+function buildLocList(q = '') {
+  const listEl = document.getElementById('loc-list');
+  listEl.innerHTML = '';
+  const fl = q.trim().toLowerCase();
+
+  const regions = {};
+  LOCATIONS.forEach(loc => {
+    if (fl && !loc.label.toLowerCase().includes(fl) && !loc.region.toLowerCase().includes(fl) && !loc.key.toLowerCase().includes(fl)) return;
+    (regions[loc.region] = regions[loc.region]||[]).push(loc);
   });
 
-  function updateRatePreview() {
-    const loc = document.getElementById('location').value;
-    const cat = document.getElementById('category').value;
-    const preview = document.getElementById('rate-preview');
-    const badge   = document.getElementById('rate-badge-text');
-
-    if (loc && cat) {
-      const dayRate  = RATES[loc][cat];
-      const hourRate = Math.round(dayRate / 8);
-      const rate     = currentUnit === 'day' ? dayRate : hourRate;
-      const unit     = currentUnit === 'day' ? 'day' : 'hour';
-      badge.textContent = `₹${rate.toLocaleString('en-IN')} / ${unit} · ${LOCATION_LABELS[loc]}`;
-      preview.classList.remove('hidden');
-    } else {
-      preview.classList.add('hidden');
-    }
+  if (!Object.keys(regions).length) {
+    listEl.innerHTML = '<div style="padding:12px 14px;font-size:.82rem;color:#94a3b8;">No results — try a different keyword.</div>';
+    return;
   }
 
-  // ── Main Calculate Function ────────────────────────────
-  function calculate() {
-    const loc      = document.getElementById('location').value;
-    const cat      = document.getElementById('category').value;
-    const workers  = parseInt(document.getElementById('workers').value);
-    const duration = parseFloat(document.getElementById('duration').value);
+  Object.keys(regions).forEach(region => {
+    const hdr = document.createElement('div');
+    hdr.style.cssText = 'padding:5px 12px 3px;font-size:.65rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em;background:#f1f5f9;border-top:1px solid #e2e8f0;';
+    hdr.textContent = region;
+    listEl.appendChild(hdr);
 
-    // Validation
-    if (!loc || !cat || !workers || !duration || workers < 1 || duration <= 0) {
-      shakeCard();
-      alert('⚠️ Please fill in all fields with valid values.');
-      return;
-    }
-
-    const dayRate  = RATES[loc][cat];
-    const hourRate = Math.round(dayRate / 8);
-    const baseRate = currentUnit === 'day' ? dayRate : hourRate;
-    const unitLabel = currentUnit === 'day' ? 'day' : 'hour';
-    const unitIcon  = currentUnit === 'day' ? '📅' : '⏱';
-
-    const total    = baseRate * workers * duration;
-
-    // Display
-    const resultBox   = document.getElementById('result-box');
-    const totalDisplay = document.getElementById('total-display');
-    const breakdownText = document.getElementById('breakdown-text');
-    const metaChips   = document.getElementById('meta-chips');
-
-    totalDisplay.textContent = '₹' + total.toLocaleString('en-IN');
-
-    const durStr = Number.isInteger(duration) ? duration : duration.toFixed(1);
-    breakdownText.innerHTML =
-      `<span class="text-orange-500 font-bold">₹${baseRate.toLocaleString('en-IN')}</span>` +
-      ` × <span class="font-bold">${workers} worker${workers > 1 ? 's' : ''}</span>` +
-      ` × <span class="font-bold">${durStr} ${unitLabel}${duration > 1 ? 's' : ''}</span>` +
-      ` = <span class="text-green-700 font-bold">₹${total.toLocaleString('en-IN')}</span>`;
-
-    // With GST
-    const totalGST = Math.round(total * 1.18);
-
-    metaChips.innerHTML = `
-      <span class="info-chip">📍 ${LOCATION_LABELS[loc]}</span>
-      <span class="info-chip">${TRADE_LABELS[cat]}</span>
-      <span class="info-chip">${unitIcon} Per-${unitLabel} rate: ₹${baseRate.toLocaleString('en-IN')}</span>
-      <span class="info-chip">💰 With 18% GST: ₹${totalGST.toLocaleString('en-IN')}</span>
-    `;
-
-    resultBox.style.display = 'block';
-    // Re-trigger animation
-    resultBox.style.animation = 'none';
-    void resultBox.offsetHeight;
-    resultBox.style.animation = '';
-
-    resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
-
-  function shakeCard() {
-    const card = document.querySelector('.bg-white');
-    card.style.animation = 'shake .35s ease';
-    setTimeout(() => card.style.animation = '', 400);
-  }
-
-  // ── Build Rate Table ───────────────────────────────────
-  function buildRateTable() {
-    const locs  = ['mumbai','thane','bandra','pune','mumbra'];
-    const cats  = ['carpenter','mistri','helper','painter','plumber'];
-    const emojis = { carpenter:'🪚', mistri:'🧱', helper:'🪣', painter:'🎨', plumber:'🔧' };
-    const names  = { carpenter:'Carpenter', mistri:'Mistri / Mason', helper:'Helper', painter:'Painter', plumber:'Plumber' };
-    const tbody  = document.getElementById('rate-table-body');
-
-    cats.forEach(cat => {
-      const tr = document.createElement('tr');
-      tr.className = 'hover:bg-slate-50 transition-colors';
-      let cells = `<td class="py-2.5 px-3 font-medium text-slate-700">${emojis[cat]} ${names[cat]}</td>`;
-      locs.forEach(loc => {
-        const r = RATES[loc][cat];
-        cells += `<td class="py-2.5 px-3 text-center text-slate-600 font-mono text-xs">₹${r.toLocaleString('en-IN')}</td>`;
-      });
-      tr.innerHTML = cells;
-      tbody.appendChild(tr);
+    regions[region].forEach(loc => {
+      const row = document.createElement('div');
+      row.style.cssText = 'padding:9px 14px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;border-bottom:1px solid #f8fafc;transition:background .12s;';
+      row.innerHTML = `<span style="font-size:.88rem;color:#1e293b;font-weight:500;">${loc.label}</span>
+        <span class="tier-pill ${TIER_CLS[loc.tier]}">${TIER_LABELS[loc.tier]}</span>`;
+      row.addEventListener('mouseenter', () => row.style.background = '#fff7ed');
+      row.addEventListener('mouseleave', () => row.style.background = '');
+      row.addEventListener('mousedown', e => { e.preventDefault(); selectLoc(loc); });
+      listEl.appendChild(row);
     });
+  });
+}
+
+function selectLoc(loc) {
+  selectedLoc = loc;
+  document.getElementById('location-key').value = loc.key;
+  document.getElementById('loc-search').value = '';
+  document.getElementById('loc-list').style.display = 'none';
+
+  const sel = document.getElementById('loc-selected');
+  sel.style.display = 'flex';
+  sel.innerHTML = `<span>📍</span><span style="font-weight:700;">${loc.label}</span>
+    <span class="tier-pill ${TIER_CLS[loc.tier]}" style="margin-left:2px;">${loc.region}</span>
+    <span onclick="clearLoc()" style="margin-left:auto;cursor:pointer;font-size:.75rem;color:#ef4444;font-weight:700;flex-shrink:0;">✕</span>`;
+  updatePreview();
+}
+
+function clearLoc() {
+  selectedLoc = null;
+  document.getElementById('location-key').value = '';
+  document.getElementById('loc-selected').style.display = 'none';
+  document.getElementById('rate-preview').classList.add('hidden');
+  buildLocList('');
+  document.getElementById('loc-list').style.display = 'block';
+}
+
+// ─── Unit ─────────────────────────────────────────────────────
+function setUnit(u) {
+  currentUnit = u;
+  document.getElementById('btn-day').classList.toggle('active', u === 'day');
+  document.getElementById('btn-hour').classList.toggle('active', u === 'hour');
+  document.getElementById('duration-label').textContent = u === 'day' ? '📆 Duration (Days)' : '⏱ Duration (Hours)';
+  updatePreview();
+}
+
+// ─── Rate preview ─────────────────────────────────────────────
+function updatePreview() {
+  const cat = document.getElementById('category').value;
+  const prev = document.getElementById('rate-preview');
+  if (selectedLoc && cat) {
+    const r = selectedLoc.rates[cat];
+    const disp = currentUnit === 'day' ? r : Math.round(r/8);
+    document.getElementById('rate-badge-text').textContent = `₹${disp.toLocaleString('en-IN')} / ${currentUnit} · ${selectedLoc.label}`;
+    prev.classList.remove('hidden');
+  } else { prev.classList.add('hidden'); }
+}
+
+// ─── Calculate ────────────────────────────────────────────────
+function calculate() {
+  const cat      = document.getElementById('category').value;
+  const workers  = parseInt(document.getElementById('workers').value) || 0;
+  const duration = parseFloat(document.getElementById('duration').value) || 0;
+
+  if (!selectedLoc || !cat || workers < 1 || duration <= 0) {
+    const c = document.getElementById('main-card');
+    c.style.animation = 'shake .35s ease';
+    setTimeout(() => c.style.animation = '', 400);
+    alert('⚠️ Kripaya location, trade, workers aur duration sahi bharein!');
+    return;
   }
 
-  buildRateTable();
+  const dayRate  = selectedLoc.rates[cat];
+  const baseRate = currentUnit === 'day' ? dayRate : Math.round(dayRate/8);
+  const unitLbl  = currentUnit === 'day' ? 'day' : 'hour';
+  const unitIcon = currentUnit === 'day' ? '📅' : '⏱';
+  const total    = Math.round(baseRate * workers * duration);
+  const totalGST = Math.round(total * 1.18);
+  const durStr   = Number.isInteger(duration) ? duration : duration.toFixed(1);
 
-  // ── Shake keyframe injection ───────────────────────────
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes shake {
-      0%,100%{transform:translateX(0)}
-      20%{transform:translateX(-6px)}
-      40%{transform:translateX(6px)}
-      60%{transform:translateX(-4px)}
-      80%{transform:translateX(4px)}
-    }`;
-  document.head.appendChild(style);
+  document.getElementById('total-display').textContent = '₹' + total.toLocaleString('en-IN');
+  document.getElementById('breakdown-text').innerHTML =
+    `<span style="color:#f97316;font-weight:700;">₹${baseRate.toLocaleString('en-IN')}</span>` +
+    ` × <b>${workers} worker${workers>1?'s':''}</b>` +
+    ` × <b>${durStr} ${unitLbl}${duration>1?'s':''}</b>` +
+    ` = <span style="color:#15803d;font-weight:700;">₹${total.toLocaleString('en-IN')}</span>`;
+
+  document.getElementById('meta-chips').innerHTML = `
+    <span class="info-chip">📍 ${selectedLoc.label}</span>
+    <span class="info-chip">🗺️ ${selectedLoc.region}</span>
+    <span class="info-chip">${TRADE_LABELS[cat]}</span>
+    <span class="info-chip">${unitIcon} ₹${baseRate.toLocaleString('en-IN')}/${unitLbl}</span>
+    <span class="info-chip">💰 With GST 18%: ₹${totalGST.toLocaleString('en-IN')}</span>
+    <span class="tier-pill ${TIER_CLS[selectedLoc.tier]}">${TIER_LABELS[selectedLoc.tier]} Zone</span>
+  `;
+
+  const box = document.getElementById('result-box');
+  box.style.display = 'block';
+  box.style.animation = 'none'; void box.offsetHeight;
+  box.style.animation = 'fadeSlideUp .35s ease both';
+  setTimeout(() => box.scrollIntoView({behavior:'smooth',block:'nearest'}), 50);
+}
+
+// ─── Region rate reference cards ──────────────────────────────
+function buildRegionCards() {
+  const container = document.getElementById('region-cards');
+  const regions = {};
+  LOCATIONS.forEach(loc => (regions[loc.region] = regions[loc.region]||[]).push(loc));
+
+  const borderColor = {vip:'#fde68a',high:'#ddd6fe',mid:'#bae6fd',std:'#bbf7d0'};
+
+  Object.keys(regions).forEach(region => {
+    const sec = document.createElement('div');
+    const rhdr = document.createElement('div');
+    rhdr.className = 'region-hdr';
+    rhdr.innerHTML = `<div style="width:3px;height:16px;border-radius:99px;background:#e2e8f0;flex-shrink:0;"></div>${region} <span style="font-size:.7rem;color:#94a3b8;font-weight:400;">(${regions[region].length} location${regions[region].length>1?'s':''})</span>`;
+    sec.appendChild(rhdr);
+
+    const grid = document.createElement('div');
+    grid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;';
+
+    regions[region].forEach(loc => {
+      const card = document.createElement('div');
+      card.className = 'rate-card';
+      card.style.border = `1.5px solid ${borderColor[loc.tier]}`;
+      card.innerHTML = `
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:4px;margin-bottom:9px;">
+          <span style="font-weight:700;font-size:.83rem;color:#1e293b;line-height:1.3;">${loc.label}</span>
+          <span class="tier-pill ${TIER_CLS[loc.tier]}" style="flex-shrink:0;">${TIER_LABELS[loc.tier]}</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px 6px;font-size:.72rem;color:#64748b;">
+          <span>🪚 ₹${loc.rates.carpenter.toLocaleString('en-IN')}</span>
+          <span>🧱 ₹${loc.rates.mistri.toLocaleString('en-IN')}</span>
+          <span>🪣 ₹${loc.rates.helper.toLocaleString('en-IN')}</span>
+          <span>🎨 ₹${loc.rates.painter.toLocaleString('en-IN')}</span>
+          <span>🔧 ₹${loc.rates.plumber.toLocaleString('en-IN')}</span>
+          <span style="color:#94a3b8;font-size:.63rem;font-style:italic;">per day ↑</span>
+        </div>
+        <div style="margin-top:8px;padding-top:7px;border-top:1px solid #f1f5f9;font-size:.67rem;color:#94a3b8;">Tap to use this location →</div>
+      `;
+      card.addEventListener('click', () => {
+        selectLoc(loc);
+        document.getElementById('main-card').scrollIntoView({behavior:'smooth',block:'start'});
+      });
+      grid.appendChild(card);
+    });
+
+    sec.appendChild(grid);
+    container.appendChild(sec);
+  });
+}
+
+// ─── Init ─────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  buildLocList('');
+  buildRegionCards();
+
+  const searchEl = document.getElementById('loc-search');
+  searchEl.addEventListener('input',  () => { buildLocList(searchEl.value); document.getElementById('loc-list').style.display='block'; });
+  searchEl.addEventListener('focus',  () => { buildLocList(searchEl.value); document.getElementById('loc-list').style.display='block'; });
+  searchEl.addEventListener('blur',   () => setTimeout(() => { document.getElementById('loc-list').style.display='none'; }, 180));
+  document.getElementById('category').addEventListener('change', updatePreview);
+});
+
+document.head.appendChild(style);
   function togglePrivacy() {
     const modal = document.getElementById('privacyModal');
     modal.classList.toggle('hidden');
